@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="panel panel-default" ng-repeat= "client in mainCtrl.clientArray">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{mainCtrl.clientArray.name}}</h3>
+    </div>
+    <div class="panel-body">{{mainCtrl.clientArray.address}} + ', ' + {{mainCtrl.clientArray.city}} + ', ' {{mainCtrl.clientArray.state}}</div>
+  </div>
+</div>
