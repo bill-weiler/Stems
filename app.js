@@ -8,15 +8,19 @@ function MainRouter($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: "/",
-      templateUrl: "home.html",
+      templateUrl: "home.html"
     })
     .state('clients', {
       url: "/clients",
-      templateUrl: "clients.html",
+      templateUrl: "clients.html"
     })
-    .state('to-do', {
+    .state('todo', {
       url: "/todo",
-      templateUrl: "to-do.html",
+      templateUrl: "todo.html"
+    })
+    .state('clientProfile', {
+      url: "/clients/:index",
+      templateUrl: "clientProfile.html"
     })
   $urlRouterProvider.otherwise('/')
 }
