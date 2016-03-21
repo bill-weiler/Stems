@@ -24,7 +24,6 @@ mainCtrl.clientsArray = [mainCtrl.Smith, mainCtrl.Jones, mainCtrl.Anderson]
 
 //==To-Dos Array==\\
 mainCtrl.toDosArray = [mainCtrl.toDoItem1, mainCtrl.toDoItem2, mainCtrl.toDoItem3]
-var toDosAlpha = toDosArray.OrderBy(person => person.LastName);
 
 //=================================================\\
 //==============Controller Functions===============\\
