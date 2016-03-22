@@ -2,7 +2,7 @@ angular.module('GreenSheets', [])
   .controller('MainController', MainController)
 
 //Controller As
-function MainController($stateParams) {
+function MainController($stateParams, $location) {
   var mainCtrl = this
 
 //==============================================\\
@@ -22,6 +22,7 @@ mainCtrl.toDoItem3 = new toDoItem('Alan',  'Anderson', 'Irrigation and watering'
 //==Clients Array==\\
 mainCtrl.clientsArray = [mainCtrl.Smith, mainCtrl.Jones, mainCtrl.Anderson]
 
+
 //==To-Dos Array==\\
 mainCtrl.toDosArray = [mainCtrl.toDoItem1, mainCtrl.toDoItem2, mainCtrl.toDoItem3]
 
@@ -29,9 +30,16 @@ mainCtrl.toDosArray = [mainCtrl.toDoItem1, mainCtrl.toDoItem2, mainCtrl.toDoItem
 //==============Controller Functions===============\\
 //=================================================\\
 mainCtrl.getClient = function(){
-  mainCtrl.client = mainCtrl.clientsArray[$stateParams.index]
+  // var index = mainCtrl.clientsArray.indexOf({lastname: $stateParams.index})
+  var search = $stateParams.lname
+  var pos = mainCtrl.clientsArray.map(function(e) {return e.lastName }).indexOf(search)
+  // console.log("getClient var index:" + pos, search)
+  mainCtrl.client = mainCtrl.clientsArray[pos]
 }
 
+mainCtrl.signIn = function(){
+  $location.path('/clients')
+}
 
 //=================================================\\
 //============Client Constructor Function==========\\

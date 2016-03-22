@@ -19,7 +19,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       templateUrl: "todo.html"
     })
     .state('clientProfile', {
-      url: "/clients/:index",
+      url: "/clients/:lname",
       templateUrl: "clientProfile.html"
     })
   $urlRouterProvider.otherwise('/')

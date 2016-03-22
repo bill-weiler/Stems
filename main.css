@@ -8,7 +8,11 @@
 body {
   background-color: #8CDCDA;
   color: #4D4D4D;
+  font-family: Gizmodo;
 }
 #navBar {
   background-color: #4D4D4D;
+}
+.textStyle {
+  color: #4D4D4D;
 }
