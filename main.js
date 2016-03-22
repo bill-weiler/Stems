@@ -19,9 +19,9 @@ mainCtrl.clientsArray = [mainCtrl.Smith, mainCtrl.Jones, mainCtrl.Anderson]
 mainCtrl.newClient    = {}
 
 //==To-Dos==\\
-mainCtrl.toDoItem1   = new toDoItem('Sarah',  'Smith',   'Spring clean-up and annuals')
-mainCtrl.toDoItem2   = new toDoItem('John',  'Jones',    'Watering only')
-mainCtrl.toDoItem3   = new toDoItem('Alan',  'Anderson', 'Irrigation and watering')
+mainCtrl.toDoItem1   = new ToDoItem('Sarah',  'Smith',   'Spring clean-up and annuals')
+mainCtrl.toDoItem2   = new ToDoItem('John',  'Jones',    'Watering only')
+mainCtrl.toDoItem3   = new ToDoItem('Alan',  'Anderson', 'Irrigation and watering')
 mainCtrl.toDosArray  = [mainCtrl.toDoItem1, mainCtrl.toDoItem2, mainCtrl.toDoItem3]
 mainCtrl.newToDoItem = ''
 
@@ -51,6 +51,10 @@ mainCtrl.newToDo = function(){
   mainCtrl.newToDoItem = ''
 }
 
+mainCtrl.removeToDo = function(toDoItem){
+  mainCtrl.toDosArray.splice(mainCtrl.toDosArray.indexOf(toDoItem), 1)
+}
+
 //=================================================\\
 //============Client Constructor Function==========\\
 //=================================================\\
@@ -68,7 +72,7 @@ this.zipCode = zipCode
 //=================================================\\
 //============To-Do Constructor Function==========\\
 //=================================================\\
-function toDoItem(firstName, lastName, description){
+function ToDoItem(firstName, lastName, description){
 this.firstName = firstName
 this.lastName = lastName
 this.description = description
