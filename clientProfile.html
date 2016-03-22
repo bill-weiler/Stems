@@ -1,7 +1,7 @@
 <div class="textStyle" ng-init="mainCtrl.getClient()">
   <div style="height: 10px;"></div>
   <div class="row" id="infoBorder">
-    <h2>{{mainCtrl.client.firstName}} {{mainCtrl.client.lastName}}<a href=""><i class="material-icons red-text lighten-1" id="deleteIcon">delete</i></a></h2>
+    <h2>{{mainCtrl.client.firstName}} {{mainCtrl.client.lastName}}<a href="#/clients" ng-click="mainCtrl.removeClient()"><i  class="material-icons red-text lighten-1" id="deleteIcon">delete</i></a></h2>
 
     <!-- ======================== -->
     <!-- Modal trigger  -->

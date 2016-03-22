@@ -46,15 +46,23 @@ mainCtrl.createNewClient = function(){
 }
 
 mainCtrl.newToDo = function(){
-  var myToDoItem = new toDoItem(mainCtrl.client.firstName, mainCtrl.client.lastName, mainCtrl.newToDoItem)
+  var myToDoItem = new ToDoItem(mainCtrl.client.firstName, mainCtrl.client.lastName, mainCtrl.newToDoItem)
   mainCtrl.toDosArray.push(myToDoItem)
   mainCtrl.newToDoItem = ''
 }
 
 mainCtrl.removeToDo=function(toDoItem) {
-  var x = confirm("Delete this item?");
+  var x = confirm("Delete this item permanently?");
   if (x == true) {
     mainCtrl.toDosArray.splice(mainCtrl.toDosArray.indexOf(toDoItem), 1)
+  }
+}
+
+mainCtrl.removeClient=function() {
+  var x = confirm("Delete this client permanently?");
+  if (x == true) {
+    console.log(mainCtrl.clientsArray.indexOf(mainCtrl.client))
+    mainCtrl.clientsArray.splice(mainCtrl.clientsArray.indexOf(mainCtrl.client), 1)
   }
 }
 
