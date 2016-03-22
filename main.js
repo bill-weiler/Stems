@@ -12,15 +12,15 @@ function MainController($stateParams, $location) {
 //==============================================\\
 
 //==Clients==\\
-mainCtrl.Smith        = new Client('Sarah',  'Smith',    '555-555-5555', 'ssmith@gmail.com',    '123 ABC Rd.', 'Denver', 'CO', '80218')
-mainCtrl.Jones        = new Client('John',  'Jones' ,    '444-444-4444',  'jjones@gmail.com',    '456 DEF Rd.', 'Denver', 'CO', '80218')
-mainCtrl.Anderson     = new Client('Alan',  'Anderson' , '333-333-3333', 'aanderson@gmail.com', '789 GHI Rd.', 'Denver', 'CO', '80218')
+mainCtrl.Smith        = new Client('Sarah',  'Smith',     '555-555-5555',  'ssmith@gmail.com',    '123 ABC Rd.', 'Denver', 'CO', '80218')
+mainCtrl.Jones        = new Client('John',   'Jones' ,    '444-444-4444',  'jjones@gmail.com',    '456 DEF Rd.', 'Denver', 'CO', '80218')
+mainCtrl.Anderson     = new Client('Alan',   'Anderson' , '333-333-3333',  'aanderson@gmail.com', '789 GHI Rd.', 'Denver', 'CO', '80218')
 mainCtrl.clientsArray = [mainCtrl.Smith, mainCtrl.Jones, mainCtrl.Anderson]
 mainCtrl.newClient    = {}
 
 //==To-Dos==\\
 mainCtrl.toDoItem1   = new ToDoItem('Sarah',  'Smith',   'Spring clean-up and annuals')
-mainCtrl.toDoItem2   = new ToDoItem('John',  'Jones',    'Watering only')
+mainCtrl.toDoItem2   = new ToDoItem('John',  'Jones',    'Install new design')
 mainCtrl.toDoItem3   = new ToDoItem('Alan',  'Anderson', 'Irrigation and watering')
 mainCtrl.toDosArray  = [mainCtrl.toDoItem1, mainCtrl.toDoItem2, mainCtrl.toDoItem3]
 mainCtrl.newToDoItem = ''
@@ -51,8 +51,11 @@ mainCtrl.newToDo = function(){
   mainCtrl.newToDoItem = ''
 }
 
-mainCtrl.removeToDo = function(toDoItem){
-  mainCtrl.toDosArray.splice(mainCtrl.toDosArray.indexOf(toDoItem), 1)
+mainCtrl.removeToDo=function(toDoItem) {
+  var x = confirm("Delete this item?");
+  if (x == true) {
+    mainCtrl.toDosArray.splice(mainCtrl.toDosArray.indexOf(toDoItem), 1)
+  }
 }
 
 //=================================================\\
