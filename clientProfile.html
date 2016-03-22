@@ -43,11 +43,11 @@
   </form>
 </div>
 <div class="row">
-  <form class="col s12">
+  <form class="col s12" ng-submit="mainCtrl.newToDo()">
     <div class="row">
       <div class="input-field col s12">
-        <textarea id="textarea1" class="materialize-textarea"></textarea>
-        <label for="textarea1">To-Do</label>
+        <textarea id="textarea1" class="materialize-textarea" ng-model="mainCtrl.newToDoItem"></textarea>
+        <label for="textarea1">New To-Do</label>
         <button class="btn-tiny waves-effect waves-light" type="submit" name="action">Submit
           <i class="material-icons right">send</i>
         </button>
