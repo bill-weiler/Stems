@@ -9,7 +9,7 @@
     <a class="waves-effect waves-light btn modal-trigger lime accent-4 black-text" href="#modal2">+ add Green Sheet</a>
 
     <!-- ======================== -->
-    <!-- Page content -->
+    <!-- Page content: Client info -->
     <!-- ======================== -->
     <h5>Client Info:</h5>
     <div class="row">
@@ -29,16 +29,29 @@
   </div>
   </div>
 </div>
+
+<!-- ======================== -->
+<!-- Property notes ========= -->
+<!-- ======================== -->
 <div class="notesContainer">
   <h5>Property Notes:</h5>
   <div class="propNoteStyle">
+    <ul class="collection">
+      <li class="collection-item">Note</li>
+    </ul>
   </div>
 </div>
 <div class="row">
   <form class="col s12">
+
+  <!-- ng-submit="mainCtrl.addNote()" ABOVE IN FORM TAG-->
+
     <div class="row">
       <div class="input-field col s12">
         <textarea id="textarea1" class="materialize-textarea"></textarea>
+
+        <!-- ng-model="mainCtrl.newPropertyNote" ABOVE IN TEXTAREA-->
+
         <label for="textarea1">New Property Note</label>
         <button class="btn-tiny waves-effect waves-light" type="submit" name="action">Submit
           <i class="material-icons right">send</i>

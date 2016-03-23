@@ -1,8 +1,8 @@
-// Module Name
+//==Module Name==\\
 angular.module('GreenSheets', [])
   .controller('MainController', MainController)
 
-//Controller as
+//==Controller as==\\
 function MainController($stateParams, $location) {
   var mainCtrl = this
 
@@ -25,6 +25,9 @@ mainCtrl.toDoItem3   = new ToDoItem('Alan',  'Anderson', 'Irrigation and waterin
 mainCtrl.toDosArray  = [mainCtrl.toDoItem1, mainCtrl.toDoItem2, mainCtrl.toDoItem3]
 mainCtrl.newToDoItem = ''
 
+//==Property Notes==\\
+mainCtrl.propertyNote1   = new PropertyNote('Does not like rose bushes')
+mainCtrl.PropertyNote    = ''
 
 //=================================================\\
 //==============Controller Functions===============\\
@@ -51,20 +54,26 @@ mainCtrl.newToDo = function(){
   mainCtrl.newToDoItem = ''
 }
 
-mainCtrl.removeToDo=function(toDoItem) {
+mainCtrl.removeToDo = function(toDoItem) {
   var x = confirm("Delete this item permanently?");
   if (x == true) {
     mainCtrl.toDosArray.splice(mainCtrl.toDosArray.indexOf(toDoItem), 1)
   }
 }
 
-mainCtrl.removeClient=function() {
+mainCtrl.removeClient = function() {
   var x = confirm("Delete this client permanently?");
   if (x == true) {
     console.log(mainCtrl.clientsArray.indexOf(mainCtrl.client))
     mainCtrl.clientsArray.splice(mainCtrl.clientsArray.indexOf(mainCtrl.client), 1)
   }
 }
+
+// mainCtrl.addNote = function(){
+//   var myPropNote = new PropertyNote(propNote)
+//   mainCtrl.client.push(myPropNote)
+//   mainCtrl.newToDoItem = ''
+// }
 
 //=================================================\\
 //============Client Constructor Function==========\\
@@ -87,6 +96,13 @@ function ToDoItem(firstName, lastName, description){
 this.firstName = firstName
 this.lastName = lastName
 this.description = description
+}
+
+//=================================================\\
+//========Property Note Constructor Function=======\\
+//=================================================\\
+function PropertyNote(propNote){
+this.propNote = propNote
 }
 
 } //End of controller

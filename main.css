@@ -56,4 +56,5 @@ body {
   padding: 5px;
   height: 20vw;
   width: 100%;
+  overflow-x: scroll;
 }
