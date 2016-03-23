@@ -1,15 +1,59 @@
-/*html {
-  background: url('https://upload.wikimedia.org/wikipedia/commons/b/b4/Gardener_watering_the_garden_at_the_Hollywood_residence_of_Paul_deLongpre,_Hollywood_Boulevard_and_Cahuenga_Avenue,_ca.1902-1903_(CHS-1754).jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}*/
 body {
   background-color: #8CDCDA;
   color: #4D4D4D;
   font-family: Garamond;
 }
+
 #navBar {
-  background-color: #4D4D4D;
+  background-color: #FFFEC6;
+  opacity: 0.75;
+}
+
+#navButtons {
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: black 2px 2px;
+}
+
+#stemsLogo {
+  padding-left: 10px;
+  font-size: 5rem;
+  color: white;
+  text-shadow: black 2px 2px;
+}
+
+#deleteIcon {
+  margin-left: 50px;
+}
+
+/*#infoBorder {
+  border: 2px solid #4D4D4D;
+  border-radius: 10px;
+  padding: 5px;
+}*/
+
+.backgroundImage {
+  background-image: url('https://pixabay.com/static/uploads/photo/2015/04/24/07/59/fat-hen-737409_960_720.jpg');
+  /*background-image: url('http://www.publicdomainpictures.net/download-picture.php?adresar=110000&soubor=teal-and-pink-succulent.jpg&id=109968');*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.borderBoxes {
+  background-color: #FFFEC6;
+  opacity: 0.5;
+  width: 75%;
+  height: auto;
+  margin: auto;
+}
+
+.textStyle {
+  color: #4D4D4D;
+}
+.notesContainer {
+  border: 2px solid #4D4D4D;
+  border-radius: 10px;
+  padding: 5px;
+  height: 20vw;
+  width: 100%;
 }

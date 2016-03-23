@@ -1,8 +1,8 @@
-<h1>To-Do</h1>
+<h2>To-Do</h2>
     <ul class="collection">
       <li class="collection-item avatar" ng-repeat="t in mainCtrl.toDosArray">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Steel_trowel.gif/576px-Steel_trowel.gif" alt="Stems Logo" class="circle">
-        <p style="font-weight: bold;">{{t.firstName}} {{t.lastName}}</p>
+        <img src="http://keworganics.com.au/wp-content/uploads/2014/08/icon-house-400x400.png" alt="trowel" class="circle">
+        <p style="font-weight: bold;">{{t.firstName}} {{t.lastName}}:</p>
         <p>{{t.description}}</p>
-        <a href="#!" class="secondary-content"><i class="material-icons">delete</i></a>
+        <a href="" ng-click="mainCtrl.removeToDo(t)" class="secondary-content"><i class="material-icons deep-orange-text darken-4">delete</i></a>
       </li>

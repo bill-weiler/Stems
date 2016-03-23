@@ -1,9 +1,11 @@
 (function() {
   'use strict';
+
+  //=============Module and dependency injector==============\\
   angular.module('StemsAppp', ['GreenSheets', 'ui.router'])
   .config(MainRouter)
 
-//ui-router
+//=============UI Router==============\\
 function MainRouter($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
@@ -19,10 +21,10 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       templateUrl: "todo.html"
     })
     .state('clientProfile', {
-      url: "/clients/:index",
+      url: "/clients/:lname",
       templateUrl: "clientProfile.html"
     })
   $urlRouterProvider.otherwise('/')
 }
 
-}());
+}()); //End of iife
