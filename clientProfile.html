@@ -6,12 +6,18 @@
       <div style="height: 10px;">
       </div>
       <div class="row">
-        <h2>{{mainCtrl.client.firstName}} {{mainCtrl.client.lastName}}<a href="#/clients" ng-click="mainCtrl.removeClient()"><i  class="material-icons deep-orange-text darken-4" id="deleteIcon">delete</i></a></h2>
+        <h2>{{mainCtrl.client.firstName}} {{mainCtrl.client.lastName}}<a href="#/clients" ng-click="mainCtrl.removeClient()"><i  class="material-icons red-text" id="deleteIcon">delete</i></a></h2>
 
-        <!-- ======================== -->
-        <!-- Modal trigger  -->
-        <!-- ======================== -->
-        <a class="waves-effect waves-light btn modal-trigger lime accent-4 black-text" href="#modal2">+ add Green Sheet</a>
+        <!-- ============================== -->
+        <!-- Edit information modal trigger -->
+        <!-- ============================== -->
+        <a class="waves-effect waves-light btn modal-trigger deep-orange lighten-1 black-text" href="#modal3">Edit Client Info</a>
+        <div style="height: 30px;"></div>
+
+        <!-- ========================== -->
+        <!-- Green Sheet modal trigger  -->
+        <!-- ========================== -->
+        <a class="waves-effect waves-light btn modal-trigger lime accent-4 black-text" href="#modal2">+ Add Green Sheet</a>
         <div style="height: 30px;"></div>
 
         <!-- ========================= -->
@@ -90,14 +96,66 @@
   </div>
 </div>
 <!-- ======================== -->
-<!-- End Page Content  -->
+<!-- ==End of Page Content==  -->
 <!-- ======================== -->
 
-
-
 <!-- ======================== -->
-<!-- Modal Structure -->
+<!-- Edit info modal content  -->
 <!-- ======================== -->
+<form class="col s12" ng-submit="mainCtrl.editClient()">
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <h4>Edit Info</h4>
+      <div class="row">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="first_name" type="text" class="validate" ng-model="mainCtrl.client.firstName">
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate" ng-model="mainCtrl.client.lastName">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="email" type="email" class="validate" ng-model="mainCtrl.client.email">
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="icon_telephone" type="tel" class="validate" ng-model="mainCtrl.client.phoneNumber">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="street_address" type="text" class="validate" ng-model="mainCtrl.client.address">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="disabled" type="text" class="validate" ng-model="mainCtrl.client.city">
+          </div>
+        </div>
+        <div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="password" type="text" class="validate" ng-model="mainCtrl.client.state">
+            </div>
+            <div class="input-field col s6">
+              <input id="password" type="text" class="validate" ng-model="mainCtrl.client.zipCode">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" name="button" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</button>
+    </div>
+  </div>
+</form>
+
+<!-- ========================= -->
+<!-- Green sheet modal content -->
+<!-- ========================= -->
 <div id="modal2" class="modal">
   <div class="modal-content">
     <h4 style="color: #8BDAD8;">Green Sheet</h4>
