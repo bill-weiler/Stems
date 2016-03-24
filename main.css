@@ -4,11 +4,6 @@ body {
   font-family: Garamond;
 }
 
-#navBar {
-  background-color: #FFFEC6;
-  opacity: 0.75;
-}
-
 #navButtons {
   font-size: 1.5rem;
   color: white;
@@ -23,18 +18,11 @@ body {
 }
 
 #deleteIcon {
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
-/*#infoBorder {
-  border: 2px solid #4D4D4D;
-  border-radius: 10px;
-  padding: 5px;
-}*/
-
 .backgroundImage {
-  background-image: url('https://pixabay.com/static/uploads/photo/2015/04/24/07/59/fat-hen-737409_960_720.jpg');
-  /*background-image: url('http://www.publicdomainpictures.net/download-picture.php?adresar=110000&soubor=teal-and-pink-succulent.jpg&id=109968');*/
+  background-image: url(image/threebudshangingout.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -54,7 +42,6 @@ body {
   border: 2px solid #4D4D4D;
   border-radius: 10px;
   padding: 5px;
-  height: 20vw;
+  height: auto;
   width: 100%;
-  overflow-x: scroll;
 }

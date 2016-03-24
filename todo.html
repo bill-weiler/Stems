@@ -1,8 +1,14 @@
-<h2>To-Do</h2>
+<!-- TO-DO UI VIEW -->
+
+<div class="row">
+  <div class="col s12">
+    <h2>To-Do</h2>
     <ul class="collection">
       <li class="collection-item avatar" ng-repeat="t in mainCtrl.toDosArray">
-        <img src="http://keworganics.com.au/wp-content/uploads/2014/08/icon-house-400x400.png" alt="trowel" class="circle">
+        <img src="image/houseicon.png" alt="trowel" class="circle">
         <p style="font-weight: bold;">{{t.firstName}} {{t.lastName}}:</p>
         <p>{{t.description}}</p>
         <a href="" ng-click="mainCtrl.removeToDo(t)" class="secondary-content"><i class="material-icons deep-orange-text darken-4">delete</i></a>
       </li>
+  </div>
+</div>
