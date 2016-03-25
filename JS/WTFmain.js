@@ -6,7 +6,6 @@ angular.module('GreenSheets', [])
 function MainController($stateParams, $location) {
   var mainCtrl = this
 
-
 //==============================================\\
 //==================VARIABLES===================\\
 //==============================================\\
@@ -26,7 +25,6 @@ mainCtrl.toDosArray  = [mainCtrl.toDoItem1, mainCtrl.toDoItem2, mainCtrl.toDoIte
 mainCtrl.newToDoItem = ''
 
 //==Property Notes==\\
-// mainCtrl.propertyNote1   = new PropertyNote('Does not like rose bushes')
 mainCtrl.newPropertyNote   = ''
 mainCtrl.propertyNoteArray = []
 
@@ -60,6 +58,7 @@ mainCtrl.newToDo = function(){
 }
 
 mainCtrl.removeToDo = function(toDoItem) {
+  console.log('remo');
   var x = confirm("Delete this item permanently?");
   if (x == true) {
     mainCtrl.toDosArray.splice(mainCtrl.toDosArray.indexOf(toDoItem), 1)

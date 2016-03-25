@@ -1,106 +1,91 @@
 <!-- CLIENT PROFILE UI VIEW -->
 
+<div class="textStyle" ng-init="mainCtrl.getClient()">
+</div>
 <div class="row">
-  <div class="col s12">
-    <div class="textStyle" ng-init="mainCtrl.getClient()">
-      <div style="height: 10px;">
-      </div>
-      <div class="row">
-        <h2>{{mainCtrl.client.firstName}} {{mainCtrl.client.lastName}}<a href="#/clients" ng-click="mainCtrl.removeClient()"><i  class="material-icons red-text" id="deleteIcon">delete</i></a></h2>
+  <h2>{{mainCtrl.client.firstName}} {{mainCtrl.client.lastName}}<a href="#/clients" ng-click="mainCtrl.removeClient()"><i  class="material-icons red-text" id="deleteIcon">delete</i></a></h2>
 
-        <!-- ============================== -->
-        <!-- Edit information modal trigger -->
-        <!-- ============================== -->
-        <a class="waves-effect waves-light btn modal-trigger deep-orange lighten-1 black-text" href="#modal3">Edit Client Info</a>
-        <div style="height: 30px;"></div>
+  <!-- ============================== -->
+  <!-- Edit information modal trigger -->
+  <!-- ============================== -->
+  <a class="waves-effect waves-light btn modal-trigger deep-orange lighten-1 black-text" href="#modal3">Edit</a>
 
-        <!-- ========================== -->
-        <!-- Green Sheet modal trigger  -->
-        <!-- ========================== -->
-        <a class="waves-effect waves-light btn modal-trigger lime accent-4 black-text" href="#modal2">+ Add Green Sheet</a>
-        <div style="height: 30px;"></div>
+  <!-- ========================== -->
+  <!-- Green Sheet modal trigger  -->
+  <!-- ========================== -->
+  <a class="waves-effect waves-light btn modal-trigger lime accent-4 black-text" href="#modal2">+ Green Sheet</a>
 
-        <!-- ========================= -->
-        <!-- Page content: Client info -->
-        <!-- ========================= -->
-        <div class="row">
-          <div class="col s6">
-            <i class="material-icons prefix">email</i>
-            <h6>Address: {{mainCtrl.client.address}}</h6>
-          </div>
-          <div class="col s6">
-            <i class="material-icons prefix">email</i>
-            <h6>{{mainCtrl.client.city}}, {{mainCtrl.client.state}} {{mainCtrl.client.zipCode}}</h6>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s6">
-            <i class="material-icons prefix">account_circle</i>
-            <h6>Email: {{mainCtrl.client.email}}</h6>
-          </div>
-          <div class="col s6">
-            <i class="material-icons prefix">phone</i>
-            <h6>Phone: {{mainCtrl.client.phoneNumber}}</h6>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12">
-            <i class="material-icons prefix">info_outline</i>
-            <h6>Door Code: {{mainCtrl.client.doorCode}}</h6>
-          </div>
-        </div>
-      </div>
+  <!-- ========================= -->
+  <!-- Page content: Client info -->
+  <!-- ========================= -->
+  <div class="row" id="rowSpacing">
+    <div class="col s6">
+      <i class="material-icons prefix">email</i>
+      <h6>Address: {{mainCtrl.client.address}} {{mainCtrl.client.city}}, {{mainCtrl.client.state}} {{mainCtrl.client.zipCode}}</h6>
     </div>
-
-    <!-- ======================== -->
-    <!-- Property notes ========= -->
-    <!-- ======================== -->
-    <div class="row">
-      <div class="col s12" style="padding: 0;">
-        <div class="notesContainer">
-          <h5>Property Notes:</h5>
-          <div class="propNoteStyle">
-            <ul class="collection">
-              <li class="collection-item" ng-repeat="n in mainCtrl.client.notes">{{n}}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <form class="col s12" ng-submit="mainCtrl.addNote()">
-        <div class="row">
-          <div class="input-field col s12">
-            <textarea id="textarea1" class="materialize-textarea" ng-model="mainCtrl.newPropertyNote"></textarea>
-            <label for="textarea1">New Property Note</label>
-            <button class="btn-tiny waves-effect waves-light" type="submit" name="action">Submit
-              <i class="material-icons right">send</i>
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="row">
-      <form class="col s12" ng-submit="mainCtrl.newToDo()">
-        <div class="row">
-          <div class="input-field col s12">
-            <textarea id="textarea1" class="materialize-textarea" ng-model="mainCtrl.newToDoItem"></textarea>
-            <label for="textarea1">New To-Do</label>
-            <button class="btn-tiny waves-effect waves-light" type="submit" name="action">Submit
-              <i class="material-icons right">send</i>
-            </button>
-          </div>
-        </div>
-      </form>
+    <div class="col s6">
+      <i class="material-icons prefix">email</i>
+      <h6>Phone: {{mainCtrl.client.phoneNumber}}</h6>
     </div>
   </div>
+  <div class="row">
+    <div class="col s6">
+      <i class="material-icons prefix">account_circle</i>
+      <h6>Email: {{mainCtrl.client.email}}</h6>
+    </div>
+    <div class="col s6">
+      <i class="material-icons prefix">phone</i>
+      <h6>Door Code: {{mainCtrl.client.doorCode}}</h6>
+    </div>
+  </div>
+
+  <!-- ========= Property notes ========= -->
+  <div class="row">
+    <div class="col s12">
+      <div class="notesContainer">
+        <h5>Property Notes:</h5>
+        <div class="propNoteStyle">
+          <ul class="collection">
+            <li class="collection-item" ng-repeat="n in mainCtrl.client.notes">{{n}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <form class="col s12" ng-submit="mainCtrl.addNote()">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea" ng-model="mainCtrl.newPropertyNote"></textarea>
+          <label for="textarea1">New Property Note</label>
+          <button class="btn-tiny waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <form class="col s12" ng-submit="mainCtrl.newToDo()">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea" ng-model="mainCtrl.newToDoItem"></textarea>
+          <label for="textarea1">New To-Do</label>
+          <button class="btn-tiny waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 </div>
 <!-- ======================== -->
 <!-- ==End of Page Content==  -->
 <!-- ======================== -->
 
 <!-- ======================== -->
-<!-- Edit info modal content  -->
+<!-- Edit client info modal   -->
 <!-- ======================== -->
 <form class="col s12" ng-submit="mainCtrl.editClient()">
   <div id="modal3" class="modal">
@@ -148,7 +133,7 @@
       </div>
     </div>
     <div class="modal-footer">
-      <button type="submit" name="button" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</button>
+      <button type="submit" name="button" class=" modal-action modal-close waves-effect waves-green btn-flat deep-orange lighten-1">Submit</button>
     </div>
   </div>
 </form>
@@ -384,7 +369,7 @@
     </div>
   </div>
   <div class="modal-footer">
-    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat deep-orange lighten-1">Submit</a>
   </div>
 </div>
 <!-- ======================== -->

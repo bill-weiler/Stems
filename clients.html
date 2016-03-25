@@ -1,7 +1,4 @@
 <!-- CLIENTS UI VIEW -->
-
-<div class="row">
-  <div class="col s12">
     <h3>Client List</h3>
 
     <!-- ======================== -->
@@ -66,7 +63,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" name="button" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</button>
+          <button type="submit" name="button" class=" modal-action modal-close waves-effect waves-green btn-flat deep-orange lighten-1">Submit</button>
         </div>
       </div>
     </form>
@@ -77,8 +74,6 @@
     <div class="collection">
       <a ng-repeat="c in mainCtrl.clientsArray | orderBy : 'lastName'" href="#/clients/{{c.lastName}}" class="collection-item active">{{c.firstName}} {{c.lastName}}</a>
     </div>
-  </div>
-</div>
 
 
 <script type="text/javascript">

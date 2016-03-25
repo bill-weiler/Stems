@@ -24,6 +24,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       url: "/clients/:lname",
       templateUrl: "clientProfile.html"
     })
+
   $urlRouterProvider.otherwise('/')
 }
 

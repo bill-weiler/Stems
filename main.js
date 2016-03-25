@@ -12,23 +12,25 @@ function MainController($stateParams, $location) {
 //==============================================\\
 
 //==Clients==\\
-mainCtrl.Smith        = new Client('Sarah',  'Smith',     '555-555-5555',  'ssmith@gmail.com',    '123 ABC Rd.', 'Denver', 'CO', '80218', '98765')
-mainCtrl.Jones        = new Client('John',   'Jones' ,    '444-444-4444',  'jjones@gmail.com',    '456 DEF Rd.', 'Denver', 'CO', '80218', '54321')
-mainCtrl.Anderson     = new Client('Alan',   'Anderson' , '333-333-3333',  'aanderson@gmail.com', '789 GHI Rd.', 'Denver', 'CO', '80218', '45678')
-mainCtrl.clientsArray = [mainCtrl.Smith, mainCtrl.Jones, mainCtrl.Anderson]
+mainCtrl.Devereaux    = new Client('Blanche',  'Devereaux', '555-555-5555',  'bdevereaux@gmail.com','123 ABC Rd.', 'Denver', 'CO', '80218', '98765')
+mainCtrl.Zbornak      = new Client('Dorothy',  'Zbornak' ,  '444-444-4444',  'dzbornak@gmail.com',  '456 DEF Rd.', 'Denver', 'CO', '80218', '54321')
+mainCtrl.Nylund       = new Client('Rose',     'Nylund' ,   '333-333-3333',  'rnylund@gmail.com',   '789 GHI Rd.', 'Denver', 'CO', '80218', '45678')
+mainCtrl.Petrillo     = new Client('Sophia',   'Petrillo' , '222-222-2222',  'spetrillo@gmail.com', '101 JKL Rd.', 'Denver', 'CO', '80218', '45678')
+mainCtrl.clientsArray = [mainCtrl.Devereaux, mainCtrl.Zbornak, mainCtrl.Nylund, mainCtrl.Petrillo]
 mainCtrl.newClient    = {}
 
 //==To-Dos==\\
-mainCtrl.toDoItem1   = new ToDoItem('Sarah',  'Smith',   'Spring clean-up and annuals')
-mainCtrl.toDoItem2   = new ToDoItem('John',  'Jones',    'Install new design')
-mainCtrl.toDoItem3   = new ToDoItem('Alan',  'Anderson', 'Irrigation and watering')
-mainCtrl.toDosArray  = [mainCtrl.toDoItem1, mainCtrl.toDoItem2, mainCtrl.toDoItem3]
+mainCtrl.toDoItem1   = new ToDoItem('Blanche', 'Devereaux', 'Spring clean-up and annuals')
+mainCtrl.toDoItem2   = new ToDoItem('Dorothy', 'Zbornak',   'Install new design')
+mainCtrl.toDoItem3   = new ToDoItem('Rose',    'Nylund',    'Irrigation and watering')
+mainCtrl.toDoItem4   = new ToDoItem('Sophia',  'Petrillo',  'Irrigation and watering')
+mainCtrl.toDosArray  = [mainCtrl.toDoItem1, mainCtrl.toDoItem2, mainCtrl.toDoItem3, mainCtrl.toDoItem4]
 mainCtrl.newToDoItem = ''
 
 //==Property Notes==\\
-// mainCtrl.propertyNote1   = new PropertyNote('Does not like rose bushes')
 mainCtrl.newPropertyNote   = ''
 mainCtrl.propertyNoteArray = []
+
 
 //=================================================\\
 //==============Controller Functions===============\\
