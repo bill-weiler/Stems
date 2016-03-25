@@ -13,6 +13,7 @@ body {
   font-size: 5rem;
   color: white;
   text-shadow: black 2px 2px;
+  font-family: Cinzel;
 }
 #deleteIcon {
   margin-left: 10px;
@@ -44,4 +45,9 @@ body {
   padding: 5px;
   height: auto;
   width: 100%;
+}
+
+@font-face {
+  font-family: 'typographyTimes';
+  src: url('Typography Times Regular.ttf');
 }

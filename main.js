@@ -23,7 +23,7 @@ mainCtrl.newClient    = {}
 mainCtrl.toDoItem1   = new ToDoItem('Blanche', 'Devereaux', 'Spring clean-up and annuals')
 mainCtrl.toDoItem2   = new ToDoItem('Dorothy', 'Zbornak',   'Install new design')
 mainCtrl.toDoItem3   = new ToDoItem('Rose',    'Nylund',    'Irrigation and watering')
-mainCtrl.toDoItem4   = new ToDoItem('Sophia',  'Petrillo',  'Irrigation and watering')
+mainCtrl.toDoItem4   = new ToDoItem('Sophia',  'Petrillo',  'Contract arborist')
 mainCtrl.toDosArray  = [mainCtrl.toDoItem1, mainCtrl.toDoItem2, mainCtrl.toDoItem3, mainCtrl.toDoItem4]
 mainCtrl.newToDoItem = ''
 
